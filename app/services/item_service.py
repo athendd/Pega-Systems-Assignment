@@ -5,8 +5,10 @@ from fastapi import HTTPException
 from schemas import PaginatedResponse
 import math
 
-def get_all_items_service(page: int, page_size: int, db: Session):
-    #return db.query(ReadingItem).all()
+def get_all_items_service(db: Session):
+    return db.query(ReadingItem).all()
+
+def get_all_items_with_pagination_service(page: int, page_size: int, db: Session):
     offset = (page - 1) * page_size
     total = db.query(ReadingItem).count()
     items = (
