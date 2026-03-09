@@ -2,6 +2,7 @@ from models import ReadingItem
 from schemas import ItemCreate, ItemUpdate
 from sqlalchemy.orm import Session
 from fastapi import HTTPException
+from fastapi_pagination import Page, paginate
 
 
 def get_all_items_service(db: Session):
@@ -18,7 +19,8 @@ def create_item_service(db: Session, item: ItemCreate):
     new_item = ReadingItem(
         title = item.title, 
         author = item.author,
-        notes = item.notes
+        notes = item.notes,
+        read = item.read
     )
 
     db.add(new_item)

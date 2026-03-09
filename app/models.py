@@ -13,7 +13,7 @@ class ReadingItem(Base):
     author = Column(String, nullable = False)
     notes = Column(Text, nullable = True)
     read = Column(Boolean, default = False)
-    created_at = Column(DateTime, default = datetime.utcnow)
+    created_at = Column(DateTime, default = datetime.utcnow, index = True)
     
     #Decides how the objects prints in the console
     def __repr__(self):

@@ -7,6 +7,7 @@ class ItemCreate(BaseModel):
     title: str
     author: str
     notes: str | None = None
+    read: bool
 
 class ItemUpdate(BaseModel):
     title: str | None = None
