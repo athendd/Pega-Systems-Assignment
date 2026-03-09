@@ -6,7 +6,7 @@ database_url = "sqlite:///reading_list.db"
 
 engine = create_engine(database_url, echo = True)
 
-session = sessionmaker(autocommit = False, autoflush = False, bind = engine)
+session = sessionmaker(autocommit = False, bind = engine)
 
 Base = declarative_base()
 

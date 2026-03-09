@@ -15,6 +15,6 @@ class ReadingItem(Base):
     read = Column(Boolean, default = False)
     created_at = Column(DateTime, default = datetime.utcnow)
     
-    #Decides how the objects prints in the console
+    #Represents how the objects prints in the console
     def __repr__(self):
             return f"<ReadingItem(title='{self.title}', author='{self.author}', read={self.read})>"
