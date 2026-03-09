@@ -2,11 +2,27 @@ from models import ReadingItem
 from schemas import ItemCreate, ItemUpdate
 from sqlalchemy.orm import Session
 from fastapi import HTTPException
-from fastapi_pagination import Page, paginate
+from schemas import PaginatedResponse
+import math
 
+def get_all_items_service(page: int, page_size: int, db: Session):
+    #return db.query(ReadingItem).all()
+    offset = (page - 1) * page_size
+    total = db.query(ReadingItem).count()
+    items = (
+        db.query(ReadingItem)
+        .order_by(ReadingItem.created_at.desc())
+        .offset(offset)
+        .limit(page_size)
+        .all()
+    )
 
-def get_all_items_service(db: Session):
-    return db.query(ReadingItem).all()
+    total_pages = math.ceil(total/page_size)
+
+    return PaginatedResponse(items = items, total = total, 
+                             page = page, page_size = page_size,
+                             total_pages = total_pages, has_next = page < total_pages,
+                             has_prev = page > 1)
 
 def get_item_service(db: Session, item_id: int):
     item = db.query(ReadingItem).filter(ReadingItem.id == item_id).first()
