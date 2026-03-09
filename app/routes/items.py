@@ -1,10 +1,12 @@
 #Defines the API routes related to items
 from services.item_service import get_item_service, update_item_service, delete_item_service, create_item_service, get_all_items_service
-from fastapi import APIRouter, HTTPException, status, Depends
+from fastapi import APIRouter, Depends
 from database import get_db
 from schemas import ItemResponse, ItemUpdate, ItemCreate
 from sqlalchemy.orm import Session
 from typing import List
+from fastapi_pagination import Page, paginate
+from fastapi_pagination.ext.sqlalchemy import paginate as sqlalchemy_paginate
 
 router = APIRouter(prefix = '/items')
 

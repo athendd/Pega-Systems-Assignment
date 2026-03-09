@@ -15,7 +15,6 @@ class ItemUpdate(BaseModel):
     read: bool | None = None
 
 class ItemResponse(BaseModel):
-    #Automatically converts objects to Pydantic models
     class Config:
         orm_mode = True
     id: int
