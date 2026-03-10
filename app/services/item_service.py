@@ -136,6 +136,8 @@ def update_item_service(db: Session, item_id: int, updated_item: ItemUpdate):
     
     update_data = updated_item.model_dump(exclude_unset = True)
     for key, value in update_data.items():
+        if (key == 'title' and not value) or (key == 'author' and not value):
+            continue
         setattr(item_to_update, key, value)
 
     db.commit()

@@ -32,8 +32,8 @@ class ItemUpdate(BaseModel):
     """
     Schema used for updating item requests.
     """
-    title: str = Field(None, min_length = 1)
-    author: str = Field(None, min_length = 1)
+    title: str
+    author: str
     notes: str | None = None
     read: bool | None = None
 
@@ -42,7 +42,7 @@ class ItemResponse(BaseModel):
     Schema used for API responses.
     """
     class Config:
-        orm_mode = True
+        from_attributes = True
     id: int
     title: str
     author: str

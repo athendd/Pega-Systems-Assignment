@@ -2,7 +2,8 @@
 Application configuration module.
 """
 
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
 
 class Settings(BaseSettings):
     """
@@ -15,6 +16,7 @@ class Settings(BaseSettings):
     database_url: str
     debug: bool = False
 
-    class Config:
-        env_file = '.env'
-        env_file_encoding = 'utf-8'
+    model_config = SettingsConfigDict(
+        env_file=".env", 
+        env_file_encoding="utf-8"
+    )
