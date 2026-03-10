@@ -2,7 +2,7 @@
 Pydantic schemas defining request and response data formats. 
 """
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from datetime import datetime
 from typing import Generic, List, TypeVar
 
@@ -21,19 +21,19 @@ class PaginatedResponse(BaseModel, Generic[T]):
 
 class ItemCreate(BaseModel):
     """
-    Schema used for created item requests.
+    Schema used for creating item requests.
     """
-    title: str 
-    author: str
+    title: str = Field(..., min_length = 1)
+    author: str = Field(..., min_length = 1)
     notes: str | None = None
     read: bool
 
 class ItemUpdate(BaseModel):
     """
-    Schema used for updated item requests.
+    Schema used for updating item requests.
     """
-    title: str | None = None
-    author: str | None = None
+    title: str = Field(None, min_length = 1)
+    author: str = Field(None, min_length = 1)
     notes: str | None = None
     read: bool | None = None
 
