@@ -4,8 +4,10 @@ from sqlalchemy import Column, Integer, String, Boolean, Text, DateTime
 from datetime import datetime
 from database import Base
 
-#Represents the reading list database table
 class ReadingItem(Base):
+    """
+    SQLAlchemy model representing a reading list item
+    """
     __tablename__ = "reading_items"
 
     id = Column(Integer, primary_key = True, index = True)
@@ -15,6 +17,6 @@ class ReadingItem(Base):
     read = Column(Boolean, default = False)
     created_at = Column(DateTime, default = datetime.utcnow)
     
-    #Represents how the objects prints in the console
+    #String representation used when printing the object
     def __repr__(self):
             return f"<ReadingItem(title='{self.title}', author='{self.author}', read={self.read})>"
