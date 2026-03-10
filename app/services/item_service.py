@@ -12,11 +12,18 @@ If page and page_size are given, results are paginated.
 Else all items are returned
 
 Args:
+    db (Session): Database session
+    page (int | None): Page number for pagination
+    page_size (int | None): Number of items per page.
+
+Returns:
+    List[ReadingItem] | PaginatedResponse[ReadingItem]
 """
 def get_all_items_service(db: Session, page: int = None, page_size: int = None):
     if page is None or page_size is None:
         return db.query(ReadingItem).all()
 
+    #Calculate how many records to skip for pagination
     offset = (page - 1) * page_size
     total = db.query(ReadingItem).count()
     items = (
@@ -34,7 +41,19 @@ def get_all_items_service(db: Session, page: int = None, page_size: int = None):
                              total_pages = total_pages, has_next = page < total_pages,
                              has_prev = page > 1)
 
-#Retrieves a single item from the database based on the given id
+"""
+Retrieve a single reading item by ID.
+
+Raises:
+    HTTPException: If the item does not exists
+
+Args:
+    db (Session): Database session
+    item_id (int): ID of item to retrieve
+
+Returns:
+    ReadingItem
+"""
 def get_item_service(db: Session, item_id: int):
     item = db.query(ReadingItem).filter(ReadingItem.id == item_id).first()
     if not item:
@@ -42,7 +61,21 @@ def get_item_service(db: Session, item_id: int):
     
     return item
 
-#Creates an item in the database
+"""
+Create a new reading item in the database.
+
+Validates required fields before inserting the record.
+
+Raises:
+    HTTPException: if item does not have value for author or title
+
+Args:
+    db (Session): Database session
+    item (ItemCreate): Item to be added to database
+
+Returns:
+    ItemCreate
+"""
 def create_item_service(db: Session, item: ItemCreate):
     new_item = ReadingItem(
         title = item.title, 
@@ -62,7 +95,16 @@ def create_item_service(db: Session, item: ItemCreate):
 
     return new_item
 
-#Deletes an item from the database
+"""
+Delete a single reading item by ID
+
+Raises:
+    HTTPException: If item does not exist in database
+
+Args:
+    db (Session): Database session
+    item_id (int): ID of item to delete
+"""
 def delete_item_service(db: Session, item_id: int):
     item_to_delete = db.query(ReadingItem).filter(ReadingItem.id == item_id).first()
     if not item_to_delete:
@@ -71,7 +113,20 @@ def delete_item_service(db: Session, item_id: int):
     db.delete(item_to_delete)
     db.commit()
 
-#Updates an item in the database
+"""
+Updates value of given reading item in database
+
+Raises:
+    HTTPException: If updated itme does not have authro or title values
+
+Args:
+    db (Session): Database session
+    item_id (int): ID of item to be updated
+    updated_item (ItemUpdate): Updated item
+
+Returns:
+    ItemUpdate
+"""
 def update_item_service(db: Session, item_id: int, updated_item: ItemUpdate):
     if not updated_item.title:
         raise HTTPException(status_code = 400, detail = 'Need to give a value to title')
