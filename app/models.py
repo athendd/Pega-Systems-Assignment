@@ -4,7 +4,7 @@ from sqlalchemy import Column, Integer, String, Boolean, Text, DateTime
 from datetime import datetime
 from database import Base
 
-#Represents the database table
+#Represents the reading list database table
 class ReadingItem(Base):
     __tablename__ = "reading_items"
 

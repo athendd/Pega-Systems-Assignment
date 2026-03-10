@@ -5,10 +5,11 @@ from fastapi import HTTPException
 from schemas import PaginatedResponse
 import math
 
-def get_all_items_service(db: Session):
-    return db.query(ReadingItem).all()
+#Gets all items from the given database
+def get_all_items_service(db: Session, page: int = None, page_size: int = None):
+    if page is None or page_size is None:
+        return db.query(ReadingItem).all()
 
-def get_all_items_with_pagination_service(page: int, page_size: int, db: Session):
     offset = (page - 1) * page_size
     total = db.query(ReadingItem).count()
     items = (
@@ -26,6 +27,7 @@ def get_all_items_with_pagination_service(page: int, page_size: int, db: Session
                              total_pages = total_pages, has_next = page < total_pages,
                              has_prev = page > 1)
 
+#Retrieves a single item from the database based on the given id
 def get_item_service(db: Session, item_id: int):
     item = db.query(ReadingItem).filter(ReadingItem.id == item_id).first()
     if not item:
@@ -33,6 +35,7 @@ def get_item_service(db: Session, item_id: int):
     
     return item
 
+#Creates an item in the database
 def create_item_service(db: Session, item: ItemCreate):
     new_item = ReadingItem(
         title = item.title, 
@@ -41,12 +44,15 @@ def create_item_service(db: Session, item: ItemCreate):
         read = item.read
     )
 
+
+
     db.add(new_item)
     db.commit()
     db.refresh(new_item)
 
     return new_item
 
+#Deletes an item from the database
 def delete_item_service(db: Session, item_id: int):
     item_to_delete = db.query(ReadingItem).filter(ReadingItem.id == item_id).first()
     if not item_to_delete:
@@ -55,6 +61,7 @@ def delete_item_service(db: Session, item_id: int):
     db.delete(item_to_delete)
     db.commit()
 
+#Updates an item in the database
 def update_item_service(db: Session, item_id: int, updated_item: ItemUpdate):
     item_to_update = db.query(ReadingItem).filter(ReadingItem.id == item_id).first()
     if not item_to_update:

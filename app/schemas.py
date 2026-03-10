@@ -14,18 +14,21 @@ class PaginatedResponse(BaseModel, Generic[T]):
     has_next: bool
     has_prev: bool
 
+#Schema for creating an item
 class ItemCreate(BaseModel):
     title: str
     author: str
     notes: str | None = None
     read: bool
 
+#Schema for updating an item
 class ItemUpdate(BaseModel):
     title: str | None = None
     author: str | None = None
     notes: str | None = None
     read: bool | None = None
 
+#Schema for returning an item
 class ItemResponse(BaseModel):
     class Config:
         orm_mode = True

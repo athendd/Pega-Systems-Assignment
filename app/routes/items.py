@@ -1,10 +1,10 @@
 #Defines the API routes related to items
-from services.item_service import get_item_service, update_item_service, delete_item_service, create_item_service, get_all_items_service, get_all_items_with_pagination_service
+from services.item_service import get_item_service, update_item_service, delete_item_service, create_item_service, get_all_items_service
 from fastapi import APIRouter, Depends, Query
 from database import get_db
 from schemas import ItemResponse, ItemUpdate, ItemCreate, PaginatedResponse
 from sqlalchemy.orm import Session
-from typing import List
+from typing import List, Union
 
 router = APIRouter(prefix = '/items')
 
@@ -24,10 +24,6 @@ def delete_item(item_id: int, db: Session = Depends(get_db)):
 def create_item(item: ItemCreate, db: Session = Depends(get_db)):
     return create_item_service(db, item)
 
-@router.get('/', response_model = List[ItemResponse])
-def get_all_items(db: Session = Depends(get_db)):
-    return get_all_items_service(db)
-
-@router.get('_with_pagination/',  response_model = PaginatedResponse[ItemResponse])
-def get_all_items(page: int = Query(1, ge = 1), page_size: int = Query(20, ge = 1, le = 100, description = 'Items per page'), db: Session = Depends(get_db)):
-    return get_all_items_with_pagination_service(page, page_size, db)
+@router.get('/', response_model = Union[List[ItemResponse], PaginatedResponse[ItemResponse]])
+def get_all_items(page: int = Query(None, ge =1), page_size: int = Query(None, ge =1, le = 100, description = "Items per page"), db: Session = Depends(get_db)):
+    return get_all_items_service(db, page, page_size)
