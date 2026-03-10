@@ -8,8 +8,10 @@ throughout the application.
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import declarative_base
+from config import Settings
 
-database_url = "sqlite:///reading_list.db"
+settings = Settings()
+database_url = settings.database_url
 
 engine = create_engine(database_url, echo = True)
 

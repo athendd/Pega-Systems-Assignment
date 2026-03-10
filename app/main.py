@@ -8,6 +8,9 @@ initializes the database connection, and starts the API service.
 from fastapi import FastAPI
 from routes import items
 from database import engine, Base
+from config import Settings
+
+settings = Settings()
 
 #Create an instance of FastAPI
 app = FastAPI()
