@@ -1,6 +1,5 @@
 """
-Schemas that define request and response data format 
-using Pydantic models
+Pydantic schemas defining request and response data formats. 
 """
 
 from pydantic import BaseModel
@@ -10,7 +9,7 @@ from typing import Generic, List, TypeVar
 T = TypeVar('T')
 class PaginatedResponse(BaseModel, Generic[T]):
     """
-    Generic schema used for paginated API response
+    Generic schema used for paginated API response.
     """
     items: List[T]
     total: int
@@ -22,7 +21,7 @@ class PaginatedResponse(BaseModel, Generic[T]):
 
 class ItemCreate(BaseModel):
     """
-    Schema used for created item requests
+    Schema used for created item requests.
     """
     title: str 
     author: str
@@ -31,7 +30,7 @@ class ItemCreate(BaseModel):
 
 class ItemUpdate(BaseModel):
     """
-    Schema used for updated item requests
+    Schema used for updated item requests.
     """
     title: str | None = None
     author: str | None = None
@@ -40,7 +39,7 @@ class ItemUpdate(BaseModel):
 
 class ItemResponse(BaseModel):
     """
-    Schema used for API responses
+    Schema used for API responses.
     """
     class Config:
         orm_mode = True

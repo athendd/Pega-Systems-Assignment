@@ -1,5 +1,5 @@
 """
-SQLAlchemy model that define the database structure
+SQLAlchemy models defining the database table structure.
 """
 
 from sqlalchemy import Column, Integer, String, Boolean, Text, DateTime
@@ -8,7 +8,7 @@ from database import Base
 
 class ReadingItem(Base):
     """
-    SQLAlchemy model representing a reading list item
+    SQLAlchemy model representing a reading list item.
     """
     __tablename__ = "reading_items"
 

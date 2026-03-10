@@ -1,6 +1,8 @@
 """
-Manage and configure the database connection by intializing 
-the engine and the session
+Configure and manage the database connection.
+
+Initializes the SQLAlchemy engine and session factory used
+throughout the application.
 """
 
 from sqlalchemy import create_engine

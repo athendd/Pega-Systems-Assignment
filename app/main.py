@@ -1,7 +1,8 @@
 """
-Entry point of the applicaiton where FastAPI applicaiton instance is created,
-API routes are registered, intializes connection to database, and starts
-API service
+Entry point of the application.
+
+Creates the FastAPI application instance, registers API routes,
+initializes the database connection, and starts the API service.
 """
 
 from fastapi import FastAPI

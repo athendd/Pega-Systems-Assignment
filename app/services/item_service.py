@@ -1,8 +1,8 @@
 """
-Service layer for reading list items
+Service layer for reading list items.
 
 Contains the business logic for CRUD operations and pagination.
-Separates database logic from API routes
+Separates database logic from API routes.
 """
 
 from models import ReadingItem
@@ -18,11 +18,11 @@ def get_all_items_service(db: Session, page: int = None, page_size: int = None):
     Retrieves reading items from the database.
 
     If page and page_size are given, results are paginated. 
-    Else all items are returned
+    Else all items are returned.
 
     Args:
-        db (Session): Database session
-        page (int | None): Page number for pagination
+        db (Session): Database session.
+        page (int | None): Page number for pagination.
         page_size (int | None): Number of items per page.
 
     Returns:
@@ -55,11 +55,11 @@ def get_item_service(db: Session, item_id: int):
     Retrieve a single reading item by ID.
 
     Raises:
-        HTTPException: If the item does not exists
+        HTTPException: If the item does not exists.
 
     Args:
-        db (Session): Database session
-        item_id (int): ID of item to retrieve
+        db (Session): Database session.
+        item_id (int): ID of item to retrieve.
 
     Returns:
         ReadingItem
@@ -77,11 +77,11 @@ def create_item_service(db: Session, item: ItemCreate):
     Validates required fields before inserting the record.
 
     Raises:
-        HTTPException: if item does not have value for author or title
+        HTTPException: if item does not have value for author or title.
 
     Args:
-        db (Session): Database session
-        item (ItemCreate): Item to be added to database
+        db (Session): Database session.
+        item (ItemCreate): Item to be added to database.
 
     Returns:
         ItemCreate
@@ -106,14 +106,14 @@ def create_item_service(db: Session, item: ItemCreate):
 
 def delete_item_service(db: Session, item_id: int):
     """
-    Delete a single reading item by ID
+    Delete a single reading item by ID.
 
     Raises:
-        HTTPException: If item does not exist in database
+        HTTPException: If item does not exist in database.
 
     Args:
-        db (Session): Database session
-        item_id (int): ID of item to delete
+        db (Session): Database session.
+        item_id (int): ID of item to delete.
     """
     item_to_delete = db.query(ReadingItem).filter(ReadingItem.id == item_id).first()
     if not item_to_delete:
@@ -124,15 +124,15 @@ def delete_item_service(db: Session, item_id: int):
 
 def update_item_service(db: Session, item_id: int, updated_item: ItemUpdate):
     """
-    Updates value of given reading item in database
+    Update fields of an existing reading item.
 
     Raises:
-        HTTPException: If updated itme does not have authro or title values
+        HTTPException: If updated itme does not have authro or title values.
 
     Args:
-        db (Session): Database session
-        item_id (int): ID of item to be updated
-        updated_item (ItemUpdate): Updated item
+        db (Session): Database session.
+        item_id (int): ID of item to be updated.
+        updated_item (ItemUpdate): Updated item.
 
     Returns:
         ItemUpdate
