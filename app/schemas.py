@@ -1,4 +1,7 @@
-#Defines response and request data formats
+"""
+Schemas that define request and response data format 
+using Pydantic models
+"""
 
 from pydantic import BaseModel
 from datetime import datetime
@@ -21,7 +24,7 @@ class ItemCreate(BaseModel):
     """
     Schema used for created item requests
     """
-    title: str
+    title: str 
     author: str
     notes: str | None = None
     read: bool

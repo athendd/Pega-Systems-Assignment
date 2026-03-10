@@ -1,3 +1,8 @@
+"""
+Manage and configure the database connection by intializing 
+the engine and the session
+"""
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm import declarative_base

@@ -1,4 +1,6 @@
-#Defines the structure of the database
+"""
+SQLAlchemy model that define the database structure
+"""
 
 from sqlalchemy import Column, Integer, String, Boolean, Text, DateTime
 from datetime import datetime
