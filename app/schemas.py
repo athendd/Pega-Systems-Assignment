@@ -24,9 +24,9 @@ class ItemCreate(BaseModel):
     """
     Schema used for creating item requests.
     """
-    title: str = Field(..., min_length = 1, strip_whitespace = True)
-    author: str = Field(..., min_length = 1, strip_whitespace = True)
-    notes: str = Field(None)
+    title: str = Field(..., min_length = 1, strip_whitespace = True, example = 'Dune')
+    author: str = Field(..., min_length = 1, strip_whitespace = True, example = 'Frank Herbert')
+    notes: str = Field(None, example = 'Sci-Fi Novel')
     read: bool 
 
 class ItemUpdate(BaseModel):
