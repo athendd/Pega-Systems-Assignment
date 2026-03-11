@@ -24,19 +24,19 @@ class ItemCreate(BaseModel):
     """
     Schema used for creating item requests.
     """
-    title: str = Field(..., min_length = 1)
-    author: str = Field(..., min_length = 1)
-    notes: str | None = None
+    title: str = Field(..., min_length = 1, strip_whitespace = True)
+    author: str = Field(..., min_length = 1, strip_whitespace = True)
+    notes: str = Field(None)
     read: bool
 
 class ItemUpdate(BaseModel):
     """
     Schema used for updating item requests.
     """
-    title: str
-    author: str
-    notes: str | None = None
-    read: bool | None = None
+    title: str = Field(..., min_length = 1, strip_whitespace = True)
+    author: str = Field(..., min_length = 1, strip_whitespace = True)
+    notes: str = Field(None)
+    read: bool 
 
 class ItemResponse(BaseModel):
     """
