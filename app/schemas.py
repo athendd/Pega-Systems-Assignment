@@ -27,16 +27,16 @@ class ItemCreate(BaseModel):
     title: str = Field(..., min_length = 1, strip_whitespace = True)
     author: str = Field(..., min_length = 1, strip_whitespace = True)
     notes: str = Field(None)
-    read: bool
+    read: bool 
 
 class ItemUpdate(BaseModel):
     """
     Schema used for updating item requests.
     """
-    title: str = Field(..., min_length = 1, strip_whitespace = True)
-    author: str = Field(..., min_length = 1, strip_whitespace = True)
+    title: str = Field(None, min_length = 1, strip_whitespace = True)
+    author: str = Field(None, min_length = 1, strip_whitespace = True)
     notes: str = Field(None)
-    read: bool 
+    read: bool = Field(None)
 
 class ItemResponse(BaseModel):
     """

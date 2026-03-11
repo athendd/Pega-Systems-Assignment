@@ -9,7 +9,7 @@ def setup_logger():
     console_handler.setLevel(logging.INFO)
 
     #Logger for file
-    file_handler = logging.FileHandler('app.log')
+    file_handler = logging.FileHandler('app.log', mode = 'w')
     file_handler.setLevel(logging.DEBUG)
 
     #Format for logs

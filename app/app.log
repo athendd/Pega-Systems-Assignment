@@ -154,3 +154,31 @@ WHERE reading_items.id = ?
 2026-03-11 11:59 - INFO - Database has been obtained
 2026-03-11 11:59 - INFO - ROLLBACK
 2026-03-11 11:59 - INFO - Database session has ended
+2026-03-11 12:04 - INFO - Creating reading item with title: string and author: string
+2026-03-11 12:04 - INFO - BEGIN (implicit)
+2026-03-11 12:04 - INFO - INSERT INTO reading_items (title, author, notes, read, created_at) VALUES (?, ?, ?, ?, ?)
+2026-03-11 12:04 - INFO - [generated in 0.00055s] ('string', 'string', None, 1, '2026-03-11 12:04:13.632909')
+2026-03-11 12:04 - INFO - COMMIT
+2026-03-11 12:04 - INFO - BEGIN (implicit)
+2026-03-11 12:04 - INFO - SELECT reading_items.id, reading_items.title, reading_items.author, reading_items.notes, reading_items.read, reading_items.created_at 
+FROM reading_items 
+WHERE reading_items.id = ?
+2026-03-11 12:04 - INFO - [cached since 306.3s ago] (10,)
+2026-03-11 12:04 - INFO - Created item with id: 10
+2026-03-11 12:04 - INFO - Database has been obtained
+2026-03-11 12:04 - INFO - ROLLBACK
+2026-03-11 12:04 - INFO - Database session has ended
+2026-03-11 12:06 - INFO - Database has been obtained
+2026-03-11 12:06 - INFO - Database session has ended
+2026-03-11 12:07 - INFO - Application starting up
+2026-03-11 12:07 - INFO - Starting up the router
+2026-03-11 12:07 - INFO - BEGIN (implicit)
+2026-03-11 12:07 - INFO - PRAGMA main.table_info("reading_items")
+2026-03-11 12:07 - INFO - [raw sql] ()
+2026-03-11 12:07 - INFO - COMMIT
+2026-03-11 12:10 - INFO - Application starting up
+2026-03-11 12:10 - INFO - Starting up the router
+2026-03-11 12:10 - INFO - BEGIN (implicit)
+2026-03-11 12:10 - INFO - PRAGMA main.table_info("reading_items")
+2026-03-11 12:10 - INFO - [raw sql] ()
+2026-03-11 12:10 - INFO - COMMIT

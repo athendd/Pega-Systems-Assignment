@@ -3,8 +3,10 @@ SQLAlchemy models defining the database table structure.
 """
 
 from sqlalchemy import Column, Integer, String, Boolean, Text, DateTime
+from sqlalchemy.orm import declarative_base
 from datetime import datetime
-from database import Base
+
+Base = declarative_base()
 
 class ReadingItem(Base):
     """
