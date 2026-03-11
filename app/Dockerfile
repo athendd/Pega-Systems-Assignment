@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY requirements-pro.txt requirements-pro.txt
 
-RUN pip install -r requirements.txt
+RUN pip install -r requirements-pro.txt
 
 COPY routes/ routes/
 COPY services/ services/
