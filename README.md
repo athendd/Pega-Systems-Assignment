@@ -41,6 +41,14 @@ ORM (Object-Relational Mapper) that allows python objects to represent tables in
 
 6. Copy the link given in the terminal and type it into a web browser (like Google) and then put /docs after it before pressing enter
 
+## Intructions to Run Tests
+
+1. Once the server is up and running, open a separate terminal
+
+2. Ensure that the new terminal is inside the app directory
+
+3. Type the command pytest tests.py into the terminal and run
+
 ## Instructions for Each Route
 
 ### Get An Item
