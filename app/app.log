@@ -1,23 +1,6 @@
-2026-03-11 13:22 - INFO - Application starting up
-2026-03-11 13:22 - INFO - Starting up the router
-2026-03-11 13:22 - INFO - BEGIN (implicit)
-2026-03-11 13:22 - INFO - PRAGMA main.table_info("reading_items")
-2026-03-11 13:22 - INFO - [raw sql] ()
-2026-03-11 13:22 - INFO - COMMIT
-2026-03-11 13:23 - INFO - Did not use pagination for retrieval
-2026-03-11 13:23 - INFO - BEGIN (implicit)
-2026-03-11 13:23 - INFO - SELECT reading_items.id AS reading_items_id, reading_items.title AS reading_items_title, reading_items.author AS reading_items_author, reading_items.notes AS reading_items_notes, reading_items.read AS reading_items_read, reading_items.created_at AS reading_items_created_at 
-FROM reading_items
-2026-03-11 13:23 - INFO - [generated in 0.00058s] ()
-2026-03-11 13:23 - INFO - Database has been obtained
-2026-03-11 13:23 - INFO - ROLLBACK
-2026-03-11 13:23 - INFO - Database session has ended
-2026-03-11 13:23 - INFO - BEGIN (implicit)
-2026-03-11 13:23 - INFO - SELECT reading_items.id AS reading_items_id, reading_items.title AS reading_items_title, reading_items.author AS reading_items_author, reading_items.notes AS reading_items_notes, reading_items.read AS reading_items_read, reading_items.created_at AS reading_items_created_at 
-FROM reading_items 
-WHERE reading_items.id = ?
- LIMIT ? OFFSET ?
-2026-03-11 13:23 - INFO - [generated in 0.00061s] (1, 1, 0)
-2026-03-11 13:23 - INFO - Database has been obtained
-2026-03-11 13:23 - INFO - ROLLBACK
-2026-03-11 13:23 - INFO - Database session has ended
+2026-03-11 13:33 - INFO - Application starting up
+2026-03-11 13:33 - INFO - Starting up the router
+2026-03-11 13:33 - INFO - BEGIN (implicit)
+2026-03-11 13:33 - INFO - PRAGMA main.table_info("reading_items")
+2026-03-11 13:33 - INFO - [raw sql] ()
+2026-03-11 13:33 - INFO - COMMIT

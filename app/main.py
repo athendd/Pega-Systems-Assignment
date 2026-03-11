@@ -25,8 +25,3 @@ app.include_router(items.router)
 
 #Create tables in database if they don't already exist
 Base.metadata.create_all(bind = engine)
-
-#Health check to ensure the application is up and running
-@app.get("/")
-def root():
-    return {"message": "Reading List API is running"}
