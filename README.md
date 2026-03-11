@@ -41,3 +41,66 @@ ORM (Object-Relational Mapper) that allows python objects to represent tables in
 
 6. Copy the link given in the terminal and type it into a web browser (like Google) and then put /docs after it before pressing enter
 
+## Instructions for Each Route
+
+### Get An Item
+
+1. Go down to Get Item route and press on down arrow to the left of it
+
+2. Press the Try it out button
+
+3. Then enter in ID (integer) in item_id box
+
+4. Then press the Execute button
+
+5. Scroll down to see the results
+
+### Update An Item
+
+1. Go down to Update Item route and press on down arrow to the left of it
+
+2. Press the Try it out button
+
+3. Then enter in ID (integer) in item_id box
+
+4. Then scroll down to Request body and enter the new values
+
+4. Then press the Execute button
+
+5. Scroll down to see the results
+
+### Delete An Item
+
+1. Go down to Delete Item route and press on down arrow to the left of it
+
+2. Press the Try it out button
+
+3. Then enter in ID (integer) in item_id box
+
+4. Then press the Execute button
+
+5. Scroll down to see the results
+
+### Create An Item
+
+1. Go down to Create Item route and press on down arrow to the left of it
+
+2. Press the Try it out button
+
+3. Then under Request body, enter values for new item
+
+4. Then press the Execute button
+
+5. Scroll down to see the results
+
+### Get All Items
+
+1. Go down to Get All Items route and press on down arrow to the left of it
+
+2. Press the Try it out button
+
+3. Optional: Enter an integer in page box and an integer in page_size box if oyu want to use pagination
+
+4. Then press the Execute button
+
+5. Scroll down to see the results
