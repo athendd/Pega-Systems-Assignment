@@ -17,7 +17,7 @@ class ReadingItem(Base):
     author = Column(String, nullable = False)
     notes = Column(Text, nullable = True)
     read = Column(Boolean, default = False)
-    created_at = Column(DateTime, default = datetime.utcnow)
+    created_at = Column(DateTime, default = datetime.now)
     
     #String representation used when printing the object
     def __repr__(self):

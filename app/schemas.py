@@ -7,6 +7,7 @@ from datetime import datetime
 from typing import Generic, List, TypeVar
 
 T = TypeVar('T')
+
 class PaginatedResponse(BaseModel, Generic[T]):
     """
     Generic schema used for paginated API response.

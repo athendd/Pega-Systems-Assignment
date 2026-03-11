@@ -1,0 +1,66 @@
+2026-03-10 15:44 - INFO - Application starting up
+2026-03-10 15:44 - INFO - BEGIN (implicit)
+2026-03-10 15:44 - INFO - PRAGMA main.table_info("reading_items")
+2026-03-10 15:44 - INFO - [raw sql] ()
+2026-03-10 15:44 - INFO - COMMIT
+2026-03-10 15:50 - INFO - Application starting up
+2026-03-10 15:50 - INFO - BEGIN (implicit)
+2026-03-10 15:50 - INFO - PRAGMA main.table_info("reading_items")
+2026-03-10 15:50 - INFO - [raw sql] ()
+2026-03-10 15:50 - INFO - COMMIT
+2026-03-10 15:50 - INFO - Application starting up
+2026-03-10 15:50 - INFO - BEGIN (implicit)
+2026-03-10 15:50 - INFO - PRAGMA main.table_info("reading_items")
+2026-03-10 15:50 - INFO - [raw sql] ()
+2026-03-10 15:50 - INFO - COMMIT
+2026-03-10 15:52 - INFO - Application starting up
+2026-03-10 15:52 - INFO - BEGIN (implicit)
+2026-03-10 15:52 - INFO - PRAGMA main.table_info("reading_items")
+2026-03-10 15:52 - INFO - [raw sql] ()
+2026-03-10 15:52 - INFO - COMMIT
+2026-03-10 15:53 - INFO - Application starting up
+2026-03-10 15:53 - INFO - BEGIN (implicit)
+2026-03-10 15:53 - INFO - PRAGMA main.table_info("reading_items")
+2026-03-10 15:53 - INFO - [raw sql] ()
+2026-03-10 15:53 - INFO - COMMIT
+2026-03-10 15:53 - INFO - Application starting up
+2026-03-10 15:53 - INFO - BEGIN (implicit)
+2026-03-10 15:53 - INFO - PRAGMA main.table_info("reading_items")
+2026-03-10 15:53 - INFO - [raw sql] ()
+2026-03-10 15:53 - INFO - COMMIT
+2026-03-10 15:54 - INFO - Application starting up
+2026-03-10 15:54 - DEBUG - Starting up the router
+2026-03-10 15:54 - INFO - BEGIN (implicit)
+2026-03-10 15:54 - INFO - PRAGMA main.table_info("reading_items")
+2026-03-10 15:54 - INFO - [raw sql] ()
+2026-03-10 15:54 - INFO - COMMIT
+2026-03-10 15:59 - INFO - Application starting up
+2026-03-10 15:59 - DEBUG - Starting up the router
+2026-03-10 15:59 - INFO - BEGIN (implicit)
+2026-03-10 15:59 - INFO - PRAGMA main.table_info("reading_items")
+2026-03-10 15:59 - INFO - [raw sql] ()
+2026-03-10 15:59 - INFO - COMMIT
+2026-03-10 16:00 - INFO - Application starting up
+2026-03-10 16:00 - DEBUG - Starting up the router
+2026-03-10 16:00 - INFO - BEGIN (implicit)
+2026-03-10 16:00 - INFO - PRAGMA main.table_info("reading_items")
+2026-03-10 16:00 - INFO - [raw sql] ()
+2026-03-10 16:00 - INFO - COMMIT
+2026-03-10 16:00 - INFO - Application starting up
+2026-03-10 16:00 - DEBUG - Starting up the router
+2026-03-10 16:00 - INFO - BEGIN (implicit)
+2026-03-10 16:00 - INFO - PRAGMA main.table_info("reading_items")
+2026-03-10 16:00 - INFO - [raw sql] ()
+2026-03-10 16:00 - INFO - COMMIT
+2026-03-10 16:04 - INFO - Application starting up
+2026-03-10 16:04 - DEBUG - Starting up the router
+2026-03-10 16:04 - INFO - BEGIN (implicit)
+2026-03-10 16:04 - INFO - PRAGMA main.table_info("reading_items")
+2026-03-10 16:04 - INFO - [raw sql] ()
+2026-03-10 16:04 - INFO - COMMIT
+2026-03-10 16:14 - INFO - Application starting up
+2026-03-10 16:14 - DEBUG - Starting up the router
+2026-03-10 16:14 - INFO - BEGIN (implicit)
+2026-03-10 16:14 - INFO - PRAGMA main.table_info("reading_items")
+2026-03-10 16:14 - INFO - [raw sql] ()
+2026-03-10 16:14 - INFO - COMMIT
