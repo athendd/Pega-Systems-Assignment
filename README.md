@@ -41,4 +41,3 @@ ORM (Object-Relational Mapper) that allows python objects to represent tables in
 
 6. Copy the link given in the terminal and type it into a web browser (like Google) and then put /docs after it before pressing enter
 
-7. 
