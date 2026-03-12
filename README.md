@@ -179,7 +179,7 @@ Unit tests ensure all routes and services work correctly without affecting the m
    docker run -d -p 8080:8000 -e DATABASE_URL=value_in_.env -e DEBUG=value_in_.env --name my-running-app my-app-name:v1
    ```
 
-**Optional Steps**
+**Optional Steps:**
 
 5. Stop the container:
    ```bash
