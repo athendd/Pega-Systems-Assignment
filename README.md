@@ -177,30 +177,34 @@ Unit tests ensure all routes and services work correctly without affecting the m
 <summary>Get Item Route</summary>
 
 ![Get Item Route](assets/swagger_get_item.png)
-
-<summary>Hello</summary>
-how are you
 </details>
-### Update Item Route
+
+<details>
+<summary>Update Item Route</summary>
 
 ![Update Item Route](assets/swagger_update_item.png)
+</details>
 
-
-### Delete Item Route
+<details>
+<summary>Delete Item Route</summary>
 
 ![Delete Item Route](assets/swagger_delete_item.png)
+</details>
 
-
-### Create Item Route
+<details>
+<summary>Create Item Route</summary>
 
 ![Create Item Route](assets/swagger_create_item.png)
+</details>
 
-
-### Get All Items Route
+<details>
+<summary>Get All Items Route</summary>
 
 ![Get All Items Route](assets/swagger_get_all_items.png)
+</details>
 
-
-### Get All Items Route (With Pagination)
+<details>
+<summary>Get All Items Route With Pagination</summary>
 
 ![Get All Items Route With Pagination](assets/swagger_get_all_items_with_pagination.png)
+</details>
