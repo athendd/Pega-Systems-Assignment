@@ -39,7 +39,7 @@ Users can create, retrieve, update, and delete items from their reading list.
 │&nbsp;&nbsp; ├── [requirements.txt](./app/requirements.txt)  
 │&nbsp;&nbsp; ├── **routes/** │&nbsp;&nbsp; │&nbsp;&nbsp; └── [items.py](./app/routes/items.py)  
 │&nbsp;&nbsp; └── **services/** │&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── [item_service.py](./app/services/item_service.py)
-│&nbsp;&nbsp; └── **testing/** │&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── [test_db.py](./app/testing/test_db.py)
+│&nbsp;&nbsp; └── **testing/** │&nbsp;&nbsp; │&nbsp;&nbsp;&nbsp; └── [test_db.py](./app/testing/test_db.py)
 
 
 ---
