@@ -88,7 +88,7 @@ An Object-Relational Mapper (ORM) that maps Python classes to database tables. E
    ```
 4. Install the dependencies:
   ```bash
-  cd app
+  pip install -r requirements.txt
   ```
 
 5. Start the server:
@@ -97,10 +97,14 @@ An Object-Relational Mapper (ORM) that maps Python classes to database tables. E
     ```
 
 6. Copy the link given in the terminal:
+   ```markdown
     http://127.0.0.1:8000
+   ```
    
 7. Open your browser and enter the link with `/docs` at the end:
+   ```markdown
     http://127.0.0.1:8000/docs
+   ```
 
 8. **Using API Routes**
 
