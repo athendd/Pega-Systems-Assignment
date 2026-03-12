@@ -18,6 +18,7 @@ Users can create, retrieve, update, and delete items from their reading list.
 * [Application Instructions](#application-instructions)
 * [Testing](#testing)
 * [Application Containerization](#application-containerization)
+* [Route Results](#route-results)
 
 ---
 
@@ -113,14 +114,6 @@ All API routes are accessible via the Swagger documentation at `/docs` once the 
 
 1. Click down arrow to expand a route and press `Try it out`.
 
-![Get Item Route](assets/swagger_get_item.ong)
-![Update Item Route](assets/swagger_update_item.png)
-![Delete Item Route](assets/swagger_delete_item.png)
-![Create Item Route](assets/swagger_create_item.png)
-![Get All Items Route](assets/swagger_get_all_items.png)
-![Get All Items Route With Pagination](assets/swagger_get_all_items_with_pagination.png)
-
-
 2. Enter required parameters:
   - **Get Item**: Enter `item_id`
    - **Update Item**: Enter `item_id` and the new values in the request body.
@@ -173,3 +166,25 @@ Unit tests ensure all routes and services work correctly without affecting the m
 3. Enter the key and value pairs for environment variables and set the port
 
 4. Open link on web browser and see the results
+
+---
+
+## Route Results
+
+### Get Item Route
+![Get Item Route](assets/swagger_get_item.ong)
+
+### Update Item Route
+![Update Item Route](assets/swagger_update_item.png)
+
+### Delete Item Route
+![Delete Item Route](assets/swagger_delete_item.png)
+
+### Create Item Route
+![Create Item Route](assets/swagger_create_item.png)
+
+### Get All Items Route
+![Get All Items Route](assets/swagger_get_all_items.png)
+
+### Get All Items Route (With Pagination)
+![Get All Items Route With Pagination](assets/swagger_get_all_items_with_pagination.png)
