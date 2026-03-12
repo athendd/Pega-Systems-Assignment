@@ -178,6 +178,8 @@ Unit tests ensure all routes and services work correctly without affecting the m
 
 ![Get Item Route](assets/swagger_get_item.png)
 
+<summary>Hello</summary>
+how are you
 </details>
 ### Update Item Route
 
