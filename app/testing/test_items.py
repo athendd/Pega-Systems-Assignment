@@ -1,5 +1,8 @@
 """
-Runs unit tests for application.
+Unit tests for application. 
+
+These tests cover various scenarios, including valid inputs,
+expected failures, and edge cases, to ensure code reliability. 
 """
 
 from testing.test_db import *

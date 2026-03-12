@@ -1,8 +1,8 @@
 """
 Configures and manages in-memory database connection for tests.
 
-Creates engine and session for in-memory database. Has 
-FastAPI application use in-memory database during testing.
+Creates engine and session for in-memory database. Switches
+FastAPI database from main database to in-memory database during testing.
 """
 
 from sqlalchemy import create_engine

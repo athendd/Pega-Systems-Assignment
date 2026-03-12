@@ -1,6 +1,8 @@
 """
-Setup logger for application to keep track of data flow 
-and possible issues
+Logger for application that keeps track of data flow 
+and possible issues while the application is running.
+
+Sends each log to a file and the console. 
 """
 
 import logging
