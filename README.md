@@ -98,12 +98,12 @@ python -m uvicorn main:app --reload
 
 7. Copy the link given in the terminal:
 ```markdown
-http://127.0.0.1:8000
+Example: http://127.0.0.1:8000
 ```
    
 8. Open your browser and enter the link with `/docs` at the end:
 ```markdown
-http://127.0.0.1:8000/docs
+Example: http://127.0.0.1:8000/docs
 ```
 
 9. **Using API Routes**
