@@ -166,12 +166,9 @@ Unit tests ensure all routes and services work correctly without affecting the m
 
 2. Run the container:
    ```bash
-   docker run -d \
-  -p 8080:3000 \
-  -e DATABASE_URL=(get actual value from .env) \
-  -e DEBUG=(True or False) \
-  --name my-running-app my-app-name:v1
-
+   docker run -d -p 8080:3000 -e DATABASE_URL=(get actual value from .env) -e DEBUG=(True or False) --name my-running-app my-app-name:v1
+   ```
+  
 ---
 
 ## Route Results
