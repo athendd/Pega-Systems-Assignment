@@ -88,11 +88,9 @@ An Object-Relational Mapper (ORM) that maps Python classes to database tables. E
 7. Open your browser and enter the link with `/docs` at the end:
     http://127.0.0.1:8000/docs
 
-### 8. **Using API Routes**
+8. **Using API Routes**
 
 ```markdown
-## Using the API Routes
-
 All API routes are accessible via the Swagger documentation at `/docs` once the server is running. Here's how to interact with them:
 
 1. Click down arrow to expand a route and press `Try it out`.
@@ -107,102 +105,37 @@ All API routes are accessible via the Swagger documentation at `/docs` once the 
 3. Press **Execute** to see the response.
 
 You can also use cURL or Postman to make requests to these endpoints.
-
 ```
 
-## Instructions for Docker
+## Testing
 
-1. Create a Docker Image with the dockerfile:
+Unit tests ensure all routes and services work correctly without affecting the main database.
 
-2. Open up Docker Desktop:
+  - Application server doesn't need to running to run tests. 
+  - Tests use an **in-memory SQLite database** to isolate them from the main database.
+  - A single shared connection (`StaticPool`) keeps the in-memory database alive throughout
+  - Tests include:
+    - Creating valid and invalid items
+    - Updating and deleting items
+    - Pagination behavior
+    - Checking response data structure 
+
+### Run Tests
+
+1. Navigate to app directory:
+   ```bash
+   cd app
+   ```
   
-3. Click on run button:
-
-4. Enter the environment variables (in project folder's .env file):
-
-5. Click on run:
-
-6. Test the application:
-   
-
-## Instructions for Testing
-
-*Server does not need to be running in order to run tests
-
-1. Open a new terminal and navigate to the app directory.
-
-2. Run tests with pytest:
+2. Execute the tests:
    ```bash
    python -m pytest
-   ```
+   ``` 
+   
 
-## Instructions for Each Route
+## Containzerize Application Instructions (using Docker)
 
-### Get An Item
-
-1. Go down to Get Item route and press on down arrow:
-
-2. Press the Try it out button:
-
-3. Enter in ID (integer) in item_id box
-
-4. Press the Execute button
-
-5. Scroll down to see the results
-
-### Update An Item
-
-1. Go down to Update Item route and press on down arrow:
-
-2. Press the Try it out button:
-
-3. Enter in ID (integer) in item_id box
-
-4. Then scroll down to Request body and enter the new values
-
-4. Then press the Execute button
-
-5. Scroll down to see the results
-
-### Delete An Item
-
-1. Go down to Delete Item route and press on down arrow to the left of it
-
-2. Press the Try it out button
-
-3. Then enter in ID (integer) in item_id box
-
-4. Then press the Execute button
-
-5. Scroll down to see the results
-
-### Create An Item
-
-1. Go down to Create Item route and press on down arrow to the left of it
-
-2. Press the Try it out button
-
-3. Then under Request body, enter values for new item
-
-4. Then press the Execute button
-
-5. Scroll down to see the results
-
-### Get All Items
-
-1. Go down to Get All Items route and press on down arrow to the left of it
-
-2. Press the Try it out button
-
-3. Optional: Enter an integer in page box and an integer in page_size box if you want to use pagination
-
-4. Then press the Execute button
-
-5. Scroll down to see the results
-
-## Instructions to Containzerize Application
-
-1. Run the Dockerfile to generate a Docker Image:
+1. Run the Dockerfile to build a Docker image:
 
 2. Open up Docker Desktop, and press the Run button for the image
 
