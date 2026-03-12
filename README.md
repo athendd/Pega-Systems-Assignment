@@ -174,7 +174,7 @@ Unit tests ensure all routes and services work correctly without affecting the m
 ## Route Results
 
 <details>
-### Get Item Route
+<summary>Get Item Route</summary>
 
 ![Get Item Route](assets/swagger_get_item.png)
 
