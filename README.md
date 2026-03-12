@@ -8,13 +8,33 @@ A small service for managing a reading list of books. Every book has:
   
 Users can create, retrieve, update, and delete items from their reading list. 
 
-## Project Structure
+---
 
-**Project Root** ├── [README.md](./README.md)  
+## Table of Contents
+
+- [Project Structure](#-project-structure)
+
+---
+
+### Project Structure
+
+**Pega-Systems-Assignment/** ├── [README.md](./README.md)  
 ├── **app/** │&nbsp;&nbsp; ├── [main.py](./app/main.py)  
-│&nbsp;&nbsp; └── [models.py](./app/models.py)  
-└── [requirements.txt](./requirements.txt)
+│&nbsp;&nbsp; ├── [schemas.py](./app/schemas.py)  
+│&nbsp;&nbsp; ├── [models.py](./app/models.py)  
+│&nbsp;&nbsp; ├── [database.py](./app/database.py)  
+│&nbsp;&nbsp; ├── [logger.py](./app/logger.py)  
+│&nbsp;&nbsp; ├── [config.py](./app/config.py)  
+│&nbsp;&nbsp; ├── [Dockerfile](./app/Dockerfile)  
+│&nbsp;&nbsp; ├── [.env](./app/.env)  
+│&nbsp;&nbsp; ├── [app.log](./app/app.log)  
+│&nbsp;&nbsp; ├── [reading_list.db](./app/reading_list.db)  
+│&nbsp;&nbsp; ├── [requirements-pro.txt](./app/requirements-pro.txt)  
+│&nbsp;&nbsp; ├── [requirements.txt](./app/requirements.txt)  
+│&nbsp;&nbsp; ├── **routes/** │&nbsp;&nbsp; │&nbsp;&nbsp; └── [items.py](./app/routes/items.py)  
+│&nbsp;&nbsp; └── **services/** │&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── [item_service.py](./app/services/item_service.py)
 
+---
 
 ## AI's Impact
 
@@ -27,7 +47,9 @@ Users can create, retrieve, update, and delete items from their reading list.
   - Recommended writing tests to verify the application's functionality.
   - Taught me about `StaticPool`, which allows tests to run using a single shared in-memory connection, enabling testing while the application is running. 
 
-## Tools and their Purpose
+---
+
+## Tools Used
 
 ### Docker
 Used to containerize the application, allowing it to run consistently across different operating systems or environments. 
@@ -46,6 +68,8 @@ Define the data structure of requests and responses. They validate input and out
 
 ### SQLAlchemy
 An Object-Relational Mapper (ORM) that maps Python classes to database tables. Enables easy interaction between Python objects and the database, including automatic table creation, querying, and updates.
+
+---
 
 ## Setup Application
 
@@ -92,6 +116,8 @@ All API routes are accessible via the Swagger documentation at `/docs` once the 
 You can also use cURL or Postman to make requests to these endpoints.
 ```
 
+---
+
 ## Testing
 
 Unit tests ensure all routes and services work correctly without affecting the main database.
@@ -115,8 +141,10 @@ Unit tests ensure all routes and services work correctly without affecting the m
    ```bash
    python -m pytest
    ``` 
-   
-## Containzerize Application Instructions (using Docker)
+
+---
+
+## Containzerize Application using Docker
 
 1. Run the Dockerfile to build a Docker image:
 
