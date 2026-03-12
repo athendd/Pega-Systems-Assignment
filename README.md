@@ -15,7 +15,7 @@ Users can create, retrieve, update, and delete items from their reading list.
 * [Project Structure](#project-structure)
 * [AI Usage](#ai-usage)
 * [Tools Used](#tools-used)
-* [Application Setup](#application-setup)
+* [Application Instructions](#application-instructions)
 * [Testing](#testing)
 * [Application Containerization](#application-containerization)
 
@@ -76,7 +76,7 @@ An Object-Relational Mapper (ORM) that maps Python classes to database tables. E
 
 ---
 
-## Application Setup
+## Application Instructions
 
 1. Download or clone the repository.
 
@@ -112,6 +112,14 @@ Example: http://127.0.0.1:8000/docs
 All API routes are accessible via the Swagger documentation at `/docs` once the server is running. Here's how to interact with them:
 
 1. Click down arrow to expand a route and press `Try it out`.
+
+![Get Item Route](assets/swagger_get_item.ong)
+![Update Item Route](assets/swagger_update_item.png)
+![Delete Item Route](assets/swagger_delete_item.png)
+![Create Item Route](assets/swagger_create_item.png)
+![Get All Items Route](assets/swagger_get_all_items.png)
+![Get All Items Route With Pagination](assets/swagger_get_all_items_with_pagination.png)
+
 
 2. Enter required parameters:
   - **Get Item**: Enter `item_id`
@@ -149,7 +157,8 @@ Unit tests ensure all routes and services work correctly without affecting the m
 2. Execute the tests:
    ```bash
    python -m pytest
-   ``` 
+   ```
+![Test Results](assets/pytest_result.png)
 
 ---
 
