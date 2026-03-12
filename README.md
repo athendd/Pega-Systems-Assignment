@@ -53,12 +53,12 @@ Users can create, retrieve, update, and delete items from their reading list.
 
 ## AI Usage
 
-  - Recommended SQLite as database engine for project.
-  - Recommended using Pydantic models to ensure proper formatting in responses and requests.
-  - Recommended using SQLAlchemy to enable interactions between database and application.
+  - Recommended `SQLite` as database engine for project.
+  - Recommended using `Pydantic` models to ensure proper formatting in responses and requests.
+  - Recommended using `SQLAlchemy` to enable interactions between database and application.
   - Recommended using a config file to keep track of environment variables.
   - Taught me to use `Union` types to accept different return types, allowing the GET all items endpoint to work with or without pagination.
-  - Recommended using logging to track data flow and potential issues.
+  - Recommended using `logging` to track data flow and potential issues.
   - Recommended writing tests to verify the application's functionality.
   - Taught me about `StaticPool`, which allows tests to run using a single shared in-memory connection, enabling testing while the application is running. 
 
@@ -70,7 +70,7 @@ Users can create, retrieve, update, and delete items from their reading list.
 A software platform for building and running applications inside containers. Keeps the application portable and consistent across different environments by bundling it alongside its dependencies in a `Dockerfile`.
 
 ### FastAPI
-A high-performance web framework ideal for building small services such as this. Integrates seamlessly with Pydantic for request/response validation, ensuring data persistence. Served via Uvicorn for its asynchronous support.
+A high-performance web framework ideal for building small services such as this. Integrates seamlessly with Pydantic for request/response validation, ensuring data persistence. Served via `Uvicorn` for its asynchronous support.
 
 ### SQLite
 A serverless, file-based relational database requiring no external setup, making it well-suited for a lightweight project like this. An in-memory instance is swapped in during testing to keep the test suite isolated from production data. 
@@ -84,9 +84,9 @@ An Object-Relational Mapper (ORM) that maps Python classes to database tables. E
 
 1. Download or clone the repository.
 
-2. Open up the repository on an IDE (like Visual Studio Code)
+2. Open up the repository on an IDE (like `Visual Studio Code`).
 
-3. Navigate to the app directory:
+3. Navigate to the `app` directory:
 ```bash
 cd app
  ```
@@ -136,7 +136,7 @@ You can also use cURL or Postman to make requests to these endpoints.
 Unit tests ensure all routes and services work correctly without affecting the main database.
 
   - Tests use an **in-memory SQLite database** to isolate them from the main database.
-  - A single shared connection (`StaticPool`) keeps the in-memory database alive throughout
+  - A single shared connection (`StaticPool`) keeps the in-memory database alive throughout.
   - Tests include:
     - Creating valid and invalid items
     - Updating and deleting items
@@ -145,7 +145,7 @@ Unit tests ensure all routes and services work correctly without affecting the m
 
 ### Run Tests
 
-1. Navigate to app directory:
+1. Navigate to `app` directory:
    ```bash
    cd app
    ```
@@ -162,14 +162,14 @@ Unit tests ensure all routes and services work correctly without affecting the m
 
 **Using Docker**
 
-1. Open Docker Desktop
+1. Open `Docker Desktop`.
    
-2. Navigate to the app repository
+2. Navigate to the `app` repository:
    ```bash
    cd app
    ```
   
-3. Run the Dockerfile to build a Docker image:
+3. Run the `Dockerfile` to build a Docker image:
    ```bash
    docker build -t my-app-name:v1 .
    ```
@@ -181,12 +181,12 @@ Unit tests ensure all routes and services work correctly without affecting the m
 
 **Optional Steps**
 
-5. Stop the container
+5. Stop the container:
    ```bash
    docker stop my-running-app
    ```
   
-6. Remove the container
+6. Remove the container:
    ```bash
    docker rm my-running-app
    ```
