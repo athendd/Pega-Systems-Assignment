@@ -161,16 +161,35 @@ Unit tests ensure all routes and services work correctly without affecting the m
 
 **Using Docker**
 
-1. Run the Dockerfile to build a Docker image:
+1. Open Docker Desktop
+   
+2. Navigate to the app repository
+   ```bash
+   cd app
+   ```
+  
+3. Run the Dockerfile to build a Docker image:
    ```bash
    docker build -t my-app-name:v1 .
    ```
 
-2. Run the container:
+4. Run the container:
    ```bash
-   docker run -d -p 8080:3000 -e DATABASE_URL=(get actual value from .env) -e DEBUG=(True or False) --name my-running-app my-app-name:v1
+   docker run -d -p 8080:8000 -e DATABASE_URL=value_in_.env -e DEBUG=value_in_.env --name my-running-app my-app-name:v1
+   ```
+
+**Optional Steps**
+
+5. Stop the container
+   ```bash
+   docker stop my-running-app
    ```
   
+6. Remove the container
+   ```bash
+   docker rm my-running-app
+   ```
+   
 ---
 
 ## Route Results
