@@ -10,6 +10,8 @@ Built a small service that manages a reading list of books. Every book in the li
 
 3. ChatGPT recommended that I use logger to keep track of data flow and issues with the code. 
 
+4. ChatGPT also recommended I had on unit tests to test the application while building. 
+
 ## Tools and their Purpose
 
 ### FastAPI
@@ -112,3 +114,13 @@ ORM (Object-Relational Mapper) that allows python objects to represent tables in
 4. Then press the Execute button
 
 5. Scroll down to see the results
+
+## Instructions to Containzerize Application
+
+1. Generate an image from the Dockerfile
+
+2. Open up Docker Desktop, and press the Run button for the image
+
+3. Entire the key and value pairs for enironment variables and set the port
+
+4. Open link on web browser and see the results
