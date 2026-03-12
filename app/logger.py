@@ -1,3 +1,8 @@
+"""
+Setup logger for application to keep track of data flow 
+and possible issues
+"""
+
 import logging
 
 def setup_logger():
