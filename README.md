@@ -70,13 +70,13 @@ Users can create, retrieve, update, and delete items from their reading list.
 A software platform for building and running applications inside containers. Keeps the application portable and consistent across different environments by bundling it alongside its dependencies in a `Dockerfile`.
 
 ### FastAPI
-A high-performance web framework ideal for building small services such as this. Integrates seamlessly with Pydantic for request/response validation, ensuring data persistence. Served via `Uvicorn` for its asynchronous support.
+A high-performance web framework ideal for building small services such as this. Integrates seamlessly with `Pydantic` for request/response validation, ensuring data persistence. Served via `Uvicorn` for its asynchronous support.
 
 ### SQLite
 A serverless, file-based relational database requiring no external setup, making it well-suited for a lightweight project like this. An in-memory instance is swapped in during testing to keep the test suite isolated from production data. 
 
 ### SQLAlchemy
-An Object-Relational Mapper (ORM) that maps Python classes to database tables. Enables straightforward interaction between Python objects and the SQLite database, such as the ReadingItem table. 
+An Object-Relational Mapper (ORM) that maps Python classes to database tables. Enables straightforward interaction between Python objects and the `SQLite` database, such as the `ReadingItem` table. 
 
 ---
 
