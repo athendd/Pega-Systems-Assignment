@@ -8,27 +8,12 @@ A small service for managing a reading list of books. Every book has:
   
 Users can create, retrieve, update, and delete items from their reading list. 
 
-## Folder Strucutre
+## Project Structure
 
-Pega-Systems-Assignment
-├──README.md
-├──app
-│  ├──main.py
-│  └──schemas.py
-│  └──models.py
-│  └──database.py
-│  └──logger.py
-│  └──config.py
-│  └──Dockerfile
-│  └──.env
-│  └──app.log
-│  └──reading_list.db
-│  └──requirements-pro.txt
-│  └──requirements.txt
-│  └──routes/
-│     └──items.py
-│  └──services
-│     └──item_service.py
+**Project Root** ├── [README.md](./README.md)  
+├── **app/** │&nbsp;&nbsp; ├── [main.py](./app/main.py)  
+│&nbsp;&nbsp; └── [models.py](./app/models.py)  
+└── [requirements.txt](./requirements.txt)
 
 
 ## AI's Impact
