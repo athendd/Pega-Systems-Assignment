@@ -19,6 +19,7 @@ Users can create, retrieve, update, and delete items from their reading list.
 * [Testing](#testing)
 * [Application Containerization Instructions](#application-containerization-instructions)
 * [API Route Results](#api-route-results)
+* [External Resources](#external-resources)
 
 ---
 
@@ -58,7 +59,6 @@ Users can create, retrieve, update, and delete items from their reading list.
   - Recommended using `SQLAlchemy` to enable interactions between database and application.
   - Recommended using a config file to keep track of environment variables.
   - Taught me to use `Union` types to accept different return types, allowing the GET all items endpoint to work with or without pagination.
-  - Recommended using `logging` to track data flow and potential issues.
   - Recommended writing tests to verify the application's functionality.
   - Taught me about `StaticPool`, which allows tests to run using a single shared in-memory connection, enabling testing while the application is running. 
 
@@ -233,3 +233,13 @@ Unit tests ensure all routes and services work correctly without affecting the m
 
 ![Get All Items Route With Pagination](assets/swagger_get_all_items_with_pagination.png)
 </details>
+
+---
+
+## External Resources
+
+https://docs.pytest.org/en/stable/
+https://www.sqlalchemy.org/
+https://fastapi.tiangolo.com/
+https://realpython.com/python-logging/
+https://docs.pydantic.dev/latest/concepts/fields/
