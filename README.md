@@ -8,6 +8,29 @@ A small service for managing a reading list of books. Every book has:
   
 Users can create, retrieve, update, and delete items from their reading list. 
 
+## Folder Strucutre
+
+Pega-Systems-Assignment
+├──README.md
+├──app
+│  ├──main.py
+│  └──schemas.py
+│  └──models.py
+│  └──database.py
+│  └──logger.py
+│  └──config.py
+│  └──Dockerfile
+│  └──.env
+│  └──app.log
+│  └──reading_list.db
+│  └──requirements-pro.txt
+│  └──requirements.txt
+│  └──routes/
+│     └──items.py
+│  └──services
+│     └──item_service.py
+
+
 ## AI's Impact
 
   - Recommended SQLite as database engine for project.
@@ -28,7 +51,7 @@ Can be used to containerize the application on run on other operating systems or
 Ideal for a small service such as this because it uses asynchronous programming to achieve high performance since it's built on an ASGI server. It also integrates with Pydantic models which I'll explain the benefits of down below.
 
 ### Uvicorn
-Fast, lightweight ASGI for Python that runs asynchronous web applications frameworks such as FastAPI. Mostly chosen due to its compatability with FastAPI. 
+Fast, lightweight ASGI for Python that runs asynchronous web applications frameworks such as FastAPI. Mostly chosen due to its compatibility with FastAPI. 
 
 ### SQLite
 Light, serverless relational database engine that stores a database in a single file. Requires no setup and servers making it easy to use for a small service. 
@@ -51,12 +74,13 @@ ORM (Object-Relational Mapper) that allows python objects to represent tables in
    ```
 4. Install the dependencies:
   ```bash
-  cd app```
+  cd app
+  ```
 
 5. Start the server:
     ```bash
-python -m uvicorn main:app --reload
-```
+    python -m uvicorn main:app --reload
+    ```
 
 6. Copy the link given in the terminal:
    
@@ -78,7 +102,7 @@ python -m uvicorn main:app --reload
 6. Test the application:
    
 
-## Intructions to Run Tests
+## Instructions to Run Tests
 
 *Server does not need to be running in order to run tests
 
@@ -93,23 +117,23 @@ python -m uvicorn main:app --reload
 
 ### Get An Item
 
-1. Go down to Get Item route and press on down arrow to the left of it
+1. Go down to Get Item route and press on down arrow:
 
-2. Press the Try it out button
+2. Press the Try it out button:
 
-3. Then enter in ID (integer) in item_id box
+3. Enter in ID (integer) in item_id box
 
-4. Then press the Execute button
+4. Press the Execute button
 
 5. Scroll down to see the results
 
 ### Update An Item
 
-1. Go down to Update Item route and press on down arrow to the left of it
+1. Go down to Update Item route and press on down arrow:
 
-2. Press the Try it out button
+2. Press the Try it out button:
 
-3. Then enter in ID (integer) in item_id box
+3. Enter in ID (integer) in item_id box
 
 4. Then scroll down to Request body and enter the new values
 
@@ -147,7 +171,7 @@ python -m uvicorn main:app --reload
 
 2. Press the Try it out button
 
-3. Optional: Enter an integer in page box and an integer in page_size box if oyu want to use pagination
+3. Optional: Enter an integer in page box and an integer in page_size box if you want to use pagination
 
 4. Then press the Execute button
 
@@ -155,10 +179,10 @@ python -m uvicorn main:app --reload
 
 ## Instructions to Containzerize Application
 
-1. Generate an image from the Dockerfile
+1. Run the Dockerfile to generate a Docker Image:
 
 2. Open up Docker Desktop, and press the Run button for the image
 
-3. Entire the key and value pairs for enironment variables and set the port
+3. Enter the key and value pairs for environment variables and set the port
 
 4. Open link on web browser and see the results
