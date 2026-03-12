@@ -67,22 +67,16 @@ Users can create, retrieve, update, and delete items from their reading list.
 ## Tools Used
 
 ### Docker
-Used to containerize the application, allowing it to run consistently across different operating systems or environments. 
+A software platform for building and running applications inside containers. Keeps the application portable and consistent across different environments by bundling it alongside its dependencies in a `Dockerfile`.
 
 ### FastAPI
-A high-performance web framework ideal for building small services such as this application. Uses asynchronous programming for speed and integrates seamlessly with Pydantic models for request/response validation. 
-
-### Uvicorn
-A fast, lightweight ASGI server for running FastAPI applications. Chosen for its compatibility with FastAPI and asynchronous support.
+A high-performance web framework ideal for building small services such as this. Integrates seamlessly with Pydantic for request/response validation, ensuring data persistence. Served via Uvicorn for its asynchronous support.
 
 ### SQLite
-A lightweight, serverless relational database stored in a single file. Requires no setup, making it ideal for small projects. An in-memory version is used during testing to prevent modifying the main database. 
-
-### Pydantic Models
-Define the data structure of requests and responses. They validate input and output data automatically, reducing errors and simplifying API development.
+A serverless, file-based relational database requiring no external setup, making it well-suited for a lightweight project like this. An in-memory instance is swapped in during testing to keep the test suite isolated from production data. 
 
 ### SQLAlchemy
-An Object-Relational Mapper (ORM) that maps Python classes to database tables. Enables easy interaction between Python objects and the database, including automatic table creation, querying, and updates.
+An Object-Relational Mapper (ORM) that maps Python classes to database tables. Enables straightforward interaction between Python objects and the SQLite database, such as the ReadingItem table. 
 
 ---
 
