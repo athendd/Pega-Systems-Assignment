@@ -160,33 +160,48 @@ Unit tests ensure all routes and services work correctly without affecting the m
 **Using Docker**
 
 1. Run the Dockerfile to build a Docker image:
+   ```bash
+   docker build -t my-app-name:v1 .
+   ```
 
-2. Open up Docker Desktop, and press the Run button for the image
-
-3. Enter the key and value pairs for environment variables and set the port
-
-4. Open link on web browser and see the results
+2. Run the container:
+   ```bash
+   docker run -d \
+  -p 8080:3000 \
+  -e DATABASE_URL=(get actual value from .env) \
+  -e DEBUG=(True or False) \
+  --name my-running-app my-app-name:v1
+  ```
 
 ---
 
 ## Route Results
 
 ### Get Item Route
+
 ![Get Item Route](assets/swagger_get_item.png)
 
-----
 
 ### Update Item Route
+
 ![Update Item Route](assets/swagger_update_item.png)
 
+
 ### Delete Item Route
+
 ![Delete Item Route](assets/swagger_delete_item.png)
 
+
 ### Create Item Route
+
 ![Create Item Route](assets/swagger_create_item.png)
 
+
 ### Get All Items Route
+
 ![Get All Items Route](assets/swagger_get_all_items.png)
 
+
 ### Get All Items Route (With Pagination)
+
 ![Get All Items Route With Pagination](assets/swagger_get_all_items_with_pagination.png)
