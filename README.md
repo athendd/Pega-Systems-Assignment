@@ -24,37 +24,30 @@ Users can create, retrieve, update, and delete items from their reading list.
 
 ## Project Structure
 
-**Pega-Systems-Assignment/**
-├── [README.md](./README.md)
-├── **assets/**
-│   ├── [pytest_result.png](./assets/pytest_result.png)
-│   ├── [swagger_create_item.png](./assets/swagger_create_item.png)
-│   ├── [swagger_delete_item.png](./assets/swagger_delete_item.png)
-│   ├── [swagger_get_all_items_with_pagination.png](./assets/swagger_get_all_items_with_pagination.png)
-│   ├── [swagger_get_all_items.png](./assets/swagger_get_all_items.png)
-│   ├── [swagger_get_item.png](./assets/swagger_get_item.png)
-│   └── [swagger_update_item.png](./assets/swagger_update_item.png)
-├── **app/**
-│   ├── [main.py](./app/main.py)
-│   ├── [schemas.py](./app/schemas.py)
-│   ├── [models.py](./app/models.py)
-│   ├── [database.py](./app/database.py)
-│   ├── [logger.py](./app/logger.py)
-│   ├── [config.py](./app/config.py)
-│   ├── [Dockerfile](./app/Dockerfile)
-│   ├── [.env](./app/.env)
-│   ├── [app.log](./app/app.log)
-│   ├── [reading_list.db](./app/reading_list.db)
-│   ├── [requirements-pro.txt](./app/requirements-pro.txt)
-│   ├── [requirements.txt](./app/requirements.txt)
-│   ├── **routes/**
-│   │   └── [items.py](./app/routes/items.py)
-│   ├── **services/**
-│   │   └── [item_service.py](./app/services/item_service.py)
-│   └── **testing/**
-│       ├── [test_db.py](./app/testing/test_db.py)
-│       └── [test_items.py](./app/testing/test_items.py)
-
+**Pega-Systems-Assignment/** ├── [README.md](./README.md)  
+├── **assets/** │&nbsp;&nbsp; ├── [pytest_result.png](./assets/pytest_result.png)  
+│&nbsp;&nbsp; ├── [swagger_create_item.png](./assets/swagger_create_item.png)  
+│&nbsp;&nbsp; ├── [swagger_delete_item.png](./assets/swagger_delete_item.png)  
+│&nbsp;&nbsp; ├── [swagger_get_all_items_with_pagination.png](./assets/swagger_get_all_items_with_pagination.png)  
+│&nbsp;&nbsp; ├── [swagger_get_all_items.png](./assets/swagger_get_all_items.png)  
+│&nbsp;&nbsp; ├── [swagger_get_item.png](./assets/swagger_get_item.png)  
+│&nbsp;&nbsp; └── [swagger_update_item.png](./assets/swagger_update_item.png)  
+├── **app/** │&nbsp;&nbsp; ├── [main.py](./app/main.py)  
+│&nbsp;&nbsp; ├── [schemas.py](./app/schemas.py)  
+│&nbsp;&nbsp; ├── [models.py](./app/models.py)  
+│&nbsp;&nbsp; ├── [database.py](./app/database.py)  
+│&nbsp;&nbsp; ├── [logger.py](./app/logger.py)  
+│&nbsp;&nbsp; ├── [config.py](./app/config.py)  
+│&nbsp;&nbsp; ├── [Dockerfile](./app/Dockerfile)  
+│&nbsp;&nbsp; ├── [.env](./app/.env)  
+│&nbsp;&nbsp; ├── [app.log](./app/app.log)  
+│&nbsp;&nbsp; ├── [reading_list.db](./app/reading_list.db)  
+│&nbsp;&nbsp; ├── [requirements-pro.txt](./app/requirements-pro.txt)  
+│&nbsp;&nbsp; ├── [requirements.txt](./app/requirements.txt)  
+│&nbsp;&nbsp; ├── **routes/** │&nbsp;&nbsp; │&nbsp;&nbsp; └── [items.py](./app/routes/items.py)  
+│&nbsp;&nbsp; ├── **services/** │&nbsp;&nbsp; │&nbsp;&nbsp; └── [item_service.py](./app/services/item_service.py)  
+│&nbsp;&nbsp; └── **testing/** │&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── [test_db.py](./app/testing/test_db.py)  
+│&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── [test_items.py](./app/testing/test_items.py)
 
 ---
 
