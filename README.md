@@ -10,7 +10,7 @@ Built a small service that manages a reading list of books. Every book in the li
 
 3. ChatGPT recommended that I use logger to keep track of data flow and issues with the code. 
 
-4. ChatGPT also recommended I had on unit tests to test the application while building. 
+4. ChatGPT also recommended I had on unit tests to test the application while building. It helped me fix the issue of the unit tests not being able to run while the application was up and running by explaining that the database for the tests only lasts 1 connection and therefore I needed one shared connection to keep it alive by using StaticPool 
 
 ## Tools and their Purpose
 
