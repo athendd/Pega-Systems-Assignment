@@ -1,24 +1,28 @@
 # Pega-Systems-Assignment
 
 A small service for managing a reading list of books. Every book has:
-  -title
-  -author
-  -notes
-  -read/unread status (labeled as read)
+  - title
+  - author
+  - notes
+  - read/unread status (labeled as read)
   
 Users can create, retrieve, update, and delete items from their reading list. 
 
 ## AI's Impact
 
-1. I used ChatGPT to help me figure out some tools I should use for the project. I had figure out what database to use, SQLite, and what web framework to use, FastAPI. ChatGPT also gave me some other recommendations for tools to use such as Pydantic models and separating the service business logic and API routes. Finally, ChatGPT recommended I use a config file to keep track of environment variables
-
-2. I wanted to add on pagination to the project but didn't like the way it looked on FastAPI docs. I decided to try one method that uses pagination and one that doesn't, but I found this two be confusing from the user's perspective. I decided I could make one method that could get all items with or without pagination depending on the parameters that were passed. I had trouble setting this up because I needed the method to be able to return different data types depending on if pagination was used or not. ChatGPT taught me about Union object which resolved this issue. 
-
-3. ChatGPT recommended that I use logger to keep track of data flow and issues with the code. 
-
-4. ChatGPT also recommended I had on unit tests to test the application while building. It helped me fix the issue of the unit tests not being able to run while the application was up and running by explaining that the database for the tests only lasts 1 connection and therefore I needed one shared connection to keep it alive by using StaticPool 
+  - Recommended SQLite as database engine for project.
+  - Recommended using Pydantic models to ensure proper formatting in responses and requests.
+  - Recommended using SQLAlchemy to enable interactions between database and application.
+  - Recommended using a config file to keep track of environment variables.
+  - Taught me to use unions as a way to accept different return types which allowed get all items to work with and without pagination.
+  - Recommended using logger to keep track of data flow and issues.
+  - Recommended I use tests to test the application's functionalities.
+  - Taught me about StaticPool which allowed testing to run at the same time as the application with their being just one shared connection. 
 
 ## Tools and their Purpose
+
+### Docker
+Can be used to containerize the application on run on other operating systems or devices. 
 
 ### FastAPI
 Ideal for a small service such as this because it uses asynchronous programming to achieve high performance since it's built on an ASGI server. It also integrates with Pydantic models which I'll explain the benefits of down below.
@@ -57,6 +61,21 @@ python -m uvicorn main:app --reload
 6. Copy the link given in the terminal:
    
 7. Enter it into a web browser with /docs at the end:
+
+
+## Instructions for Docker
+
+1. Create a Docker Image with the dockerfile:
+
+2. Open up Docker Desktop:
+  
+3. Click on run button:
+
+4. Enter the environment variables (in project folder's .env file):
+
+5. Click on run:
+
+6. Test the application:
    
 
 ## Intructions to Run Tests
