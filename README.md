@@ -14,7 +14,7 @@ Users can create, retrieve, update, and delete items from their reading list.
 
 * [Project Structure](#project-structure)
 * [AI Usage](#ai-usage)
-* [Tools Used](#tools-used)
+* [Tools](#tools)
 * [Application Instructions](#application-instructions)
 * [Testing](#testing)
 * [Application Containerization](#application-containerization)
@@ -64,7 +64,7 @@ Users can create, retrieve, update, and delete items from their reading list.
 
 ---
 
-## Tools Used
+## Tools 
 
 ### Docker
 A software platform for building and running applications inside containers. Keeps the application portable and consistent across different environments by bundling it alongside its dependencies in a `Dockerfile`.
@@ -115,7 +115,7 @@ Example: http://127.0.0.1:8000/docs
 ```markdown
 All API routes are accessible via the Swagger documentation at `/docs` once the server is running. Here's how to interact with them:
 
-1. Click down arrow to expand a route and press `Try it out`.
+1. Click the down arrow to expand a route and press `Try it out`.
 
 2. Enter required parameters:
   - **Get Item**: Enter `item_id`
