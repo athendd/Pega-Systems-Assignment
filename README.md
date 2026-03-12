@@ -37,36 +37,36 @@ Pega-Systems-Assignment
   - Recommended using Pydantic models to ensure proper formatting in responses and requests.
   - Recommended using SQLAlchemy to enable interactions between database and application.
   - Recommended using a config file to keep track of environment variables.
-  - Taught me to use unions as a way to accept different return types which allowed get all items to work with and without pagination.
-  - Recommended using logger to keep track of data flow and issues.
-  - Recommended I use tests to test the application's functionalities.
-  - Taught me about StaticPool which allowed testing to run at the same time as the application with their being just one shared connection. 
+  - Taught me to use `Union` types to accept different return types, allowing the GET all items endpoint to work with or without pagination.
+  - Recommended using logging to track data flow and potential issues.
+  - Recommended writing tests to verify the application's functionality.
+  - Taught me about `StaticPool`, which allows tests to run using a single shared in-memory connection, enabling testing while the application is running. 
 
 ## Tools and their Purpose
 
 ### Docker
-Can be used to containerize the application on run on other operating systems or devices. 
+Used to containerize the application, allowing it to run consistently across different operating systems or environments. 
 
 ### FastAPI
-Ideal for a small service such as this because it uses asynchronous programming to achieve high performance since it's built on an ASGI server. It also integrates with Pydantic models which I'll explain the benefits of down below.
+A high-performance web framework ideal for building small services such as this application. Uses asynchronous programming for speed and integrates seamlessly with Pydantic models for request/response validation. 
 
 ### Uvicorn
-Fast, lightweight ASGI for Python that runs asynchronous web applications frameworks such as FastAPI. Mostly chosen due to its compatibility with FastAPI. 
+A fast, lightweight ASGI server for running FastAPI applications. Chosen for its compatibility with FastAPI and asynchronous support.
 
 ### SQLite
-Light, serverless relational database engine that stores a database in a single file. Requires no setup and servers making it easy to use for a small service. 
+A lightweight, serverless relational database stored in a single file. Requires no setup, making it ideal for small projects. An in-memory version is used during testing to prevent modifying the main database. 
 
 ### Pydantic Models
-Models that define data structure which help to ensure proper formatting and procedures for responses and requests. 
+Define the data structure of requests and responses. They validate input and output data automatically, reducing errors and simplifying API development.
 
 ### SQLAlchemy
-ORM (Object-Relational Mapper) that allows python objects to represent tables in database. Allowed easy interaction between applicaiton and database since objects could be converted to tables and vice versa. 
+An Object-Relational Mapper (ORM) that maps Python classes to database tables. Enables easy interaction between Python objects and the database, including automatic table creation, querying, and updates.
 
-## Instructions to Start Application
+## Setup Application
 
-1. Download the project folder to your local device.
+1. Download or clone the repository.
 
-2. Open up the project folder on an IDE (like Visual Studio Code)
+2. Open up the repository on an IDE (like Visual Studio Code)
 
 3. Navigate to the app directory:
   ```bash
@@ -83,9 +83,32 @@ ORM (Object-Relational Mapper) that allows python objects to represent tables in
     ```
 
 6. Copy the link given in the terminal:
+    http://127.0.0.1:8000
    
-7. Enter it into a web browser with /docs at the end:
+7. Open your browser and enter the link with `/docs` at the end:
+    http://127.0.0.1:8000/docs
 
+### 8. **Using API Routes**
+
+```markdown
+## Using the API Routes
+
+All API routes are accessible via the Swagger documentation at `/docs` once the server is running. Here's how to interact with them:
+
+1. Click down arrow to expand a route and press `Try it out`.
+
+2. Enter required parameters:
+  - **Get Item**: Enter `item_id`
+   - **Update Item**: Enter `item_id` and the new values in the request body.
+   - **Delete Item**: Enter `item_id`.
+   - **Create Item**: Enter title, author, read status, and optional notes.
+   - **Get All Items**: Optional `page` and `page_size` parameters for pagination.
+
+3. Press **Execute** to see the response.
+
+You can also use cURL or Postman to make requests to these endpoints.
+
+```
 
 ## Instructions for Docker
 
@@ -102,7 +125,7 @@ ORM (Object-Relational Mapper) that allows python objects to represent tables in
 6. Test the application:
    
 
-## Instructions to Run Tests
+## Instructions for Testing
 
 *Server does not need to be running in order to run tests
 
