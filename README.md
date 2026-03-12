@@ -111,7 +111,6 @@ You can also use cURL or Postman to make requests to these endpoints.
 
 Unit tests ensure all routes and services work correctly without affecting the main database.
 
-  - Application server doesn't need to running to run tests. 
   - Tests use an **in-memory SQLite database** to isolate them from the main database.
   - A single shared connection (`StaticPool`) keeps the in-memory database alive throughout
   - Tests include:
@@ -132,7 +131,6 @@ Unit tests ensure all routes and services work correctly without affecting the m
    python -m pytest
    ``` 
    
-
 ## Containzerize Application Instructions (using Docker)
 
 1. Run the Dockerfile to build a Docker image:
