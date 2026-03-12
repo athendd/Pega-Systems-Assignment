@@ -12,11 +12,11 @@ Users can create, retrieve, update, and delete items from their reading list.
 
 ## Table of Contents
 
-- [Project Structure](#-project-structure)
+- [Project Structure](##-project-structure)
 
 ---
 
-### Project Structure
+## Project Structure
 
 **Pega-Systems-Assignment/** ├── [README.md](./README.md)  
 ├── **app/** │&nbsp;&nbsp; ├── [main.py](./app/main.py)  
