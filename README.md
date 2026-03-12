@@ -171,7 +171,6 @@ Unit tests ensure all routes and services work correctly without affecting the m
   -e DATABASE_URL=(get actual value from .env) \
   -e DEBUG=(True or False) \
   --name my-running-app my-app-name:v1
-  ```
 
 ---
 
