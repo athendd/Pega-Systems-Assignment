@@ -1,3 +1,6 @@
+"""
+Runs unit tests for application.
+"""
 
 from testing.test_db import *
 from main import app
