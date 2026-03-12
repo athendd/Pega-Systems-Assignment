@@ -17,8 +17,8 @@ Users can create, retrieve, update, and delete items from their reading list.
 * [Tools](#tools)
 * [Application Instructions](#application-instructions)
 * [Testing](#testing)
-* [Application Containerization](#application-containerization)
-* [Route Results](#route-results)
+* [Application Containerization Instructions](#application-containerization-instructions)
+* [API Route Results](#api-route-results)
 
 ---
 
@@ -196,7 +196,7 @@ Unit tests ensure all routes and services work correctly without affecting the m
    
 ---
 
-## Route Results
+## API Route Results
 
 <details>
 <summary>Get Item Route</summary>
