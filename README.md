@@ -13,6 +13,11 @@ Users can create, retrieve, update, and delete items from their reading list.
 ## Table of Contents
 
 * [Project Structure](#project-structure)
+* [AI Usage](#ai-usage)
+* [Tools Used](#tools-used)
+* [Application Setup](#application-setup)
+* [Testing](#testing)
+* [Application Containerization](#application-containerization)
 
 ---
 
@@ -36,7 +41,7 @@ Users can create, retrieve, update, and delete items from their reading list.
 
 ---
 
-## AI's Impact
+## AI Usage
 
   - Recommended SQLite as database engine for project.
   - Recommended using Pydantic models to ensure proper formatting in responses and requests.
@@ -71,7 +76,7 @@ An Object-Relational Mapper (ORM) that maps Python classes to database tables. E
 
 ---
 
-## Setup Application
+## Application Setup
 
 1. Download or clone the repository.
 
@@ -144,7 +149,9 @@ Unit tests ensure all routes and services work correctly without affecting the m
 
 ---
 
-## Containzerize Application using Docker
+## Application Containerization 
+
+**Using Docker**
 
 1. Run the Dockerfile to build a Docker image:
 
