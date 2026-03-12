@@ -1,6 +1,12 @@
 # Pega-Systems-Assignment
 
-Built a small service that manages a reading list of books. Every book in the list has an author, title, notes, and read/unread attributes. The service allows users to manage their own reading list by creating, deleting, updating, and retrieving items from the list. 
+A small service for managing a reading list of books. Every book has:
+  -title
+  -author
+  -notes
+  -read/unread status (labeled as read)
+  
+Users can create, retrieve, update, and delete items from their reading list. 
 
 ## AI's Impact
 
@@ -24,32 +30,45 @@ Fast, lightweight ASGI for Python that runs asynchronous web applications framew
 Light, serverless relational database engine that stores a database in a single file. Requires no setup and servers making it easy to use for a small service. 
 
 ### Pydantic Models
-Models that define ddata structure which help to ensure proper formatting and procedures for responses and requests. 
+Models that define data structure which help to ensure proper formatting and procedures for responses and requests. 
 
 ### SQLAlchemy
 ORM (Object-Relational Mapper) that allows python objects to represent tables in database. Allowed easy interaction between applicaiton and database since objects could be converted to tables and vice versa. 
 
 ## Instructions to Start Application
 
-1. Open up the application on an IDE (like Visual Studio Code)
+1. Download the project folder to your local device.
 
-2. Open up a terminal and go to the project's directory (PEGA-SYSTEM-ASSIGNMENT)
+2. Open up the project folder on an IDE (like Visual Studio Code)
 
-3. Type cd app into the terminal to reach the app directory
+3. Navigate to the app directory:
+  ```bash
+  cd app
+   ```
+4. Install the dependencies:
+  ```bash
+  cd app```
 
-4. Type pip install -r requirements.txt into the terminal and run the command
+5. Start the server:
+    ```bash
+python -m uvicorn main:app --reload
+```
 
-5. Type uvicorn main:app --reload into the terminal and run to start the application
-
-6. Copy the link given in the terminal and type it into a web browser (like Google) and then put /docs after it before pressing enter
+6. Copy the link given in the terminal:
+   
+7. Enter it into a web browser with /docs at the end:
+   
 
 ## Intructions to Run Tests
 
-1. Once the server is up and running, open a separate terminal
+*Server does not need to be running in order to run tests
 
-2. Ensure that the new terminal is inside the app directory
+1. Open a new terminal and navigate to the app directory.
 
-3. Type the command pytest tests.py into the terminal and run
+2. Run tests with pytest:
+   ```bash
+   python -m pytest
+   ```
 
 ## Instructions for Each Route
 
