@@ -83,30 +83,30 @@ An Object-Relational Mapper (ORM) that maps Python classes to database tables. E
 2. Open up the repository on an IDE (like Visual Studio Code)
 
 3. Navigate to the app directory:
-  ```bash
-  cd app
-   ```
+```bash
+cd app
+ ```
 4. Install the dependencies:
-  ```bash
-  pip install -r requirements.txt
-  ```
+```bash
+pip install -r requirements.txt
+```
 
 5. Start the server:
-    ```bash
-    python -m uvicorn main:app --reload
-    ```
+```bash
+python -m uvicorn main:app --reload
+```
 
-6. Copy the link given in the terminal:
-   ```markdown
-    http://127.0.0.1:8000
-   ```
+7. Copy the link given in the terminal:
+```markdown
+http://127.0.0.1:8000
+```
    
-7. Open your browser and enter the link with `/docs` at the end:
-   ```markdown
-    http://127.0.0.1:8000/docs
-   ```
+8. Open your browser and enter the link with `/docs` at the end:
+```markdown
+http://127.0.0.1:8000/docs
+```
 
-8. **Using API Routes**
+9. **Using API Routes**
 
 ```markdown
 All API routes are accessible via the Swagger documentation at `/docs` once the server is running. Here's how to interact with them:
