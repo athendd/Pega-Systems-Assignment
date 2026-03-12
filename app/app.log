@@ -1,6 +1,0 @@
-2026-03-11 16:21 - INFO - Application starting up
-2026-03-11 16:21 - INFO - Starting up the router
-2026-03-11 16:21 - INFO - BEGIN (implicit)
-2026-03-11 16:21 - INFO - PRAGMA main.table_info("reading_items")
-2026-03-11 16:21 - INFO - [raw sql] ()
-2026-03-11 16:21 - INFO - COMMIT

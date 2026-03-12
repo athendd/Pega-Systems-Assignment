@@ -21,12 +21,12 @@ logger.info('Creating the engine')
 engine = create_engine(database_url, echo = True)
 
 logger.info('Creating the session')
-session = sessionmaker(autocommit = False, bind = engine)
+LocalSession = sessionmaker(autocommit = False, bind = engine)
 
 Base = declarative_base()
 
 def get_db():
-    db = session()
+    db = LocalSession()
     try:
         yield db
         logger.info('Database has been obtained')
