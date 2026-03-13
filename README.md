@@ -82,7 +82,13 @@ An Object-Relational Mapper (ORM) that maps Python classes to database tables. E
 
 ## Application Instructions
 
-**Python==3.13.12**
+### Requirements
+
+  -**Python** 3.13.12+
+  -**Uvicorn** 0.35.0+
+  -**pip**
+
+### Installation
 
 1. Download or clone the repository.
 
@@ -96,6 +102,8 @@ cd app
 ```bash
 pip install -r requirements.txt
 ```
+
+### Running the API
 
 5. Start the server:
 ```bash
