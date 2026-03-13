@@ -84,9 +84,9 @@ An Object-Relational Mapper (ORM) that maps Python classes to database tables. E
 
 ### Requirements
 
-  - Python 3.13.12+
-  - Uvicorn 0.35.0+
-  - pip
+  - **Python** 3.13.12+
+  - **Uvicorn** 0.35.0+
+  - **pip** 25.3+
 
 ### Installation
 
