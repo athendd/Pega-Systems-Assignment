@@ -55,11 +55,10 @@ Users can create, retrieve, update, and delete items from their reading list.
 ## AI Usage
 
   - Recommended `SQLite` as database engine for project.
-  - Recommended using `Pydantic` models to ensure proper formatting in responses and requests.
-  - Recommended using `SQLAlchemy` to enable interactions between database and application.
-  - Recommended using a config file to keep track of environment variables.
+  - Recommended `Pydantic` models to ensure proper formatting in responses and requests.
+  - Recommended `SQLAlchemy` to enable interactions between database and application.
+  - Recommended a config file to keep track of environment variables.
   - Taught me to use `Union` types to accept different return types, allowing the GET all items endpoint to work with or without pagination.
-  - Recommended writing tests to verify the application's functionality.
   - Taught me about `StaticPool`, which allows tests to run using a single shared in-memory connection, enabling testing while the application is running. 
 
 ---
@@ -251,8 +250,7 @@ Unit tests ensure all routes and services work correctly without affecting the m
 
 ## External Resources
 
-https://docs.pytest.org/en/stable/
-https://www.sqlalchemy.org/
-https://fastapi.tiangolo.com/
-https://realpython.com/python-logging/
-https://docs.pydantic.dev/latest/concepts/fields/
+  - https://docs.pytest.org/en/stable/
+  - https://www.sqlalchemy.org/
+  - https://realpython.com/python-logging/
+  - https://docs.pydantic.dev/latest/concepts/fields/
