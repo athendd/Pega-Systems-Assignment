@@ -66,8 +66,8 @@ Users can create, retrieve, update, and delete items from their reading list.
 
 ## Tools 
 
-### Docker
-A software platform for building and running applications inside containers. Keeps the application portable and consistent across different environments by bundling it alongside its dependencies in a `Dockerfile`.
+### Python
+A high-level programming language widely used for web development and backend services. I used `Python` because it is the language I am most comfortable with, which allowed me to quickly build the application.
 
 ### FastAPI
 A high-performance web framework ideal for building small services such as this. Integrates seamlessly with `Pydantic` for request/response validation, ensuring data persistence. Served via `Uvicorn` for its asynchronous support.
@@ -77,6 +77,9 @@ A serverless, file-based relational database requiring no external setup, making
 
 ### SQLAlchemy
 An Object-Relational Mapper (ORM) that maps Python classes to database tables. Enables straightforward interaction between Python objects and the `SQLite` database, such as the `ReadingItem` table. 
+
+### Docker
+A software platform for building and running applications inside containers. Keeps the application portable and consistent across different environments by bundling it alongside its dependencies in a `Dockerfile`.
 
 ---
 
