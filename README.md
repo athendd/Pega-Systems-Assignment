@@ -82,6 +82,8 @@ An Object-Relational Mapper (ORM) that maps Python classes to database tables. E
 
 ## Application Instructions
 
+**Python==3.13.12**
+
 1. Download or clone the repository.
 
 2. Open up the repository on an IDE (like `Visual Studio Code`).
